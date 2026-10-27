@@ -1,0 +1,61 @@
+# ─────────────────────────────────────────────────────────────────
+# Handwritten Recognition — .gitignore
+# ─────────────────────────────────────────────────────────────────
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# ─── Large binary data files ─────────────────────────────────────
+# EMNIST binary files (large — download via train_kiro.py)
+data/emnist/*.gz
+data/emnist/*.bin
+
+# Augmented / generated image folders (reproducible — not source)
+# (keep data/raw/ — those are the original user drawings)
+
+# ─── Model weights ───────────────────────────────────────────────
+# Large trained model files — regenerate with python src_kiro/train_kiro.py
+models/*.keras
+models/*.h5
+models/*.pkl
+models/*.pt
+models/*.pb
+models/variables/
+
+# Keep model metadata and evaluation outputs
+!models/labels.json
+!models/preproc_config.json
+!models/*.png
+!models/*.txt
+!models/*.json
+
+# ─── Feedback images ─────────────────────────────────────────────
+# User-specific feedback data — not committed to shared repo
+data/feedback/images/
+data/feedback/feedback.csv
+
+# ─── IDE / OS ────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# ─── Logs / temp ─────────────────────────────────────────────────
+*.log
+*.tmp
+_check_kiro.py
+_fix_csv.py
+_audit_temp.py

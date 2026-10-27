@@ -1,0 +1,26 @@
+# ─────────────────────────────────────────────────────────────────
+# Handwritten Character Recognition — Python Dependencies
+# ─────────────────────────────────────────────────────────────────
+# Install with:
+#   pip install -r requirements.txt
+#
+# Tested on Python 3.13 + TensorFlow 2.20+
+# ─────────────────────────────────────────────────────────────────
+
+# Deep learning  (Python 3.13 requires TF 2.20+)
+tensorflow>=2.20.0
+
+# Image processing
+Pillow>=10.0.0
+
+# Numerical computing
+numpy>=1.26.0
+
+# Machine learning utilities (metrics, class weights)
+scikit-learn>=1.4.0
+
+# Plotting (training curves, confusion matrix)
+matplotlib>=3.8.0
+
+# Elastic deformation in augmentation (optional but recommended)
+scipy>=1.12.0
